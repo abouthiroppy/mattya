@@ -1,0 +1,8 @@
+language: node_js
+node_js:
+  - '4.2.2'
+before_script:
+  - 'npm install'
+  - 'npm run build'
+  - 'npm run lint'
+  - 'npm run test'
