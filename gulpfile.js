@@ -40,7 +40,7 @@ gulp.task('watchify', () => {
 function compile(isUglify, isWatch) {
   const logger        = new bundleLogger(jsPaths.entryPoint, jsPaths.dist);
   const browserifyObj = browserify(jsPaths.entryPoint)
-    .transform(babelify, {presets: ['es2015']});
+    .transform(babelify, {presets: ['es2015', 'react']});
 
   // const option = {
   //   entries: [jsPaths.entryPoint],
