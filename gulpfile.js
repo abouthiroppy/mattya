@@ -70,7 +70,7 @@ function compile(isUglify, isWatch) {
     // option.fullPaths    = true;
 
     bundler = watchify(browserifyObj);
-    logger.watch();
+    // logger.watch();
   }
   else {
     bundler = browserifyObj;

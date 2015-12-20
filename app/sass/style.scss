@@ -1,4 +1,52 @@
 @import "./mixins";
+@import "./constants.scss";
 
-body {
+@media only screen and (min-width: 993px) {
+  .container {
+    width: 85%; 
+  }
+}
+
+.global-nav {
+  background: $key-color;
+}
+
+.icon {
+  vertical-align: middle;
+}
+
+.circle-icon {
+  background: #f5f5f5;
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.page-title {
+  font-size: 3.0rem;
+}
+
+.page-section-title {
+  color: #3498db;
+  font-weight: 300;
+}
+
+.section-title {
+  color: $key-color;
+  font-weight: 300;
+}
+
+a.collection-item {
+  p {
+    color: #777;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .row {
+    margin-bottom: 0;
+  }
 }
