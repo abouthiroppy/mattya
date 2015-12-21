@@ -26,7 +26,7 @@ export default class extends Component {
   _build(path, title) {
     return (
       <div className="col s6 m6 l4">
-        <Link to={path} className="waves-effect waves-light btn" 
+        <Link to={path} className="waves-effect waves-light btn"
           style={this._initCss().btn}>{title}</Link>
       </div>
     );

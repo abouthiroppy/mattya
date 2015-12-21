@@ -36,7 +36,6 @@ export default class extends Component {
     return (
       <div className="row section">
         <h2 className="header page-section-title">Blogs</h2>
-       
         {this.buildCard(
           'sketchbook',
           {
