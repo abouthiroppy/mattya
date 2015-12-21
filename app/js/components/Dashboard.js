@@ -3,6 +3,7 @@ import React, {
   PropTypes
 } from 'react';
 
+import Menu   from './Dashboard/Menu';
 import Blog   from './dashboard/Blog';
 import Travis from './dashboard/Travis';
 
@@ -14,6 +15,7 @@ export default class extends Component {
   render() {
     return (
       <div>
+        <Menu />
         <Travis />
         <Blog />
       </div>
