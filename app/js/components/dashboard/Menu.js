@@ -34,7 +34,7 @@ export default class extends Component {
 
   render() {
     return (
-      <div className="row section">
+      <div className="row">
         <div className="col s12 m6 l6">
           <h2 className="header page-section-title">Menu</h2>
           {this._build('/profile', 'Profile')}

@@ -15,9 +15,10 @@ export default class extends Component {
   render() {
     return (
       <div>
+      <div className="card-panel teal lighten-2">Teach last version at git</div>
         <Menu />
-        <Travis />
         <Blog />
+        <Travis />
       </div>
     );
   }

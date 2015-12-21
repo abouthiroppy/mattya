@@ -16,16 +16,15 @@ export default class extends Component {
     };
   }
 
-  buildCard(title, color, period, uri) {
+  buildCard(title, img, color, period, uri) {
     return (
-      <div className="col s12 m6">
-      <div className="card blue accent-1 medium">
+      <div className="col s12 m6 l4">
+      <div className="card blue accent-1 small">
          <div className="card-image">
-            <img src="http://about-hiroppy.com/images/flash-bg4.jpg" />
+            <img src={img} />
             <span className="card-title">{title}</span>
           </div>
           <div className="card-content white-text">
-            <span className="card-title">{title}</span>
             <p>start on {period}</p>
           </div>
           <div className="card-action">
@@ -39,42 +38,68 @@ export default class extends Component {
   render() {
     return (
       <div className="row section">
+        <h2 className="header page-section-title">Works</h2>
         {this.buildCard(
           'Flash',
+          'http://about-hiroppy.com/images/flash-bg1.jpg',
           {
             btnColor : 'amber darken-2',
             cardColor: 'blue accent-1'
           },
-          '2015-04-26',
+          '2012-03-18',
+          'http://about-hiroppy.com/flash/'
+        )}
+        {this.buildCard(
+          '楽ラク顔文字(仮)',
+          'http://about-hiroppy.com/images/kaomozi.jpg',
+          {
+            btnColor : 'amber darken-2',
+            cardColor: 'blue accent-1'
+          },
+          '2011-06-17',
           'http://blog.about-hiroppy.org/'
         )}
         {this.buildCard(
-          'ひろっぴーのふろっぴー',
+          'Labelial',
+          'http://about-hiroppy.com/images/labelial.png',
           {
             btnColor : 'amber darken-2',
             cardColor: 'blue accent-1'
           },
-          '2012-05-21',
-          'http://blog.about-hiroppy.org/'
+          '2013-10-07',
+          'http://about-hiroppy.com/Labelial/index.html'
         )}
         {this.buildCard(
-          'ひろっぴーのふろっぴー',
+          'AOJ_Compare',
+          'http://about-hiroppy.com/images/compare.png',
           {
             btnColor : 'amber darken-2',
             cardColor: 'blue accent-1'
           },
-          '2012-05-21',
-          'http://blog.about-hiroppy.org/'
+          '2012-05-09',
+          'http://about-hiroppy.com/Labelial/index.html'
         )}
         {this.buildCard(
-          'ひろっぴーのふろっぴー',
+          'AOJ_Compare_n',
+          'http://about-hiroppy.com/images/compare.png',
           {
             btnColor : 'amber darken-2',
             cardColor: 'blue accent-1'
           },
-          '2012-05-21',
-          'http://blog.about-hiroppy.org/'
+          '2012-06-21',
+          'http://about-hiroppy.com/Labelial/index.html'
         )}
+        {this.buildCard(
+          'あおいちゃん@AOJ',
+          'http://about-hiroppy.com/images/aoi.png',
+          {
+            btnColor : 'amber darken-2',
+            cardColor: 'blue accent-1'
+          },
+          '2011-05-09',
+          'http://about-hiroppy.com/Labelial/index.html'
+        )}
+
       </div>
     );
   }
