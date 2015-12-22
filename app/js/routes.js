@@ -6,12 +6,12 @@ import {
   IndexRoute
 } from 'react-router';
 
-import App          from './components/App';
-import Work         from './components/Work';
-import Blog         from './components/Blog';
-import Profile      from './components/Profile';
-import Dashboard    from './components/Dashboard';
-import Programming  from './components/Programming';
+import App         from './components/App';
+import Work        from './components/Work';
+import Blog        from './components/Blog';
+import Profile     from './components/Profile';
+import Dashboard   from './components/Dashboard';
+import Programming from './components/Programming';
 
 export default (
   <Route path="/" component={App}>

@@ -19,6 +19,9 @@ export default class extends Component {
       btn: {
         width       : '140px',
         marginBottom: '10px'
+      },
+      socialCard: {
+        textAlign: 'center'
       }
     };
   }
@@ -43,7 +46,14 @@ export default class extends Component {
           {this._build('/work', 'work')}
         </div>
         <div className="col s12 m6 l6">
-          <h2 className="header page-section-title">Social?</h2>
+          <h2 className="header page-section-title">Social</h2>
+          <section className="card-panel" style={this._initCss().socialCard}>
+          <a className="twitter-timeline"
+            href="https://twitter.com/about_hiroppy"
+            data-widget-id="679095752254169088" height="10px">
+            Tweets by @about_hiroppy
+          </a>
+          </section>
         </div>
       </div>
     );
