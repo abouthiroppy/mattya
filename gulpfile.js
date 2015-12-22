@@ -81,7 +81,7 @@ function compile(isUglify, isWatch) {
 
     const baseBundler = bundler
       .bundle()
-      .on('error', handleError)
+      // .on('error', handleError)
       .pipe(source(jsPaths.outputName))
       .pipe(buffer())
       .pipe($.sourcemaps.init({loadMaps: true}))
