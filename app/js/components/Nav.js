@@ -7,43 +7,74 @@ import {
 } from 'react-router';
 
 export default class extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  _setTitle() {
+    this.setState({title: location.hash.split('#/')[1].split('?')[0]});
+  }
+
+  _initCss() {
+    return {
+      btnHamburger: {
+        left   : '40px',
+        display: 'block'
+      },
+      hamburgerIcon: {
+        fontSize: '1.9rem'
+      }
+    };
+  }
+
+  componentDidMount() {
+    const hamburger = $('#btn-hamburger');
+
+    // jQuery was called at index.html
+    hamburger.sideNav();
+
+    $('#slide-out a').on('click', () => {
+      hamburger.sideNav('hide');
+    });
+  }
+
   render() {
     return (
       <div className="navbar-fixed">
         <nav className="global-nav">
+          <ul id="slide-out" className="side-nav">
+            <li>
+              <Link to="/">Root</Link>
+            </li>
+            <li>
+              <Link to="profile">Profile</Link>
+            </li>
+            <li>
+              <Link to="programming">Programming</Link>
+            </li>
+            <li>
+              <Link to="blog">Blog</Link>
+            </li>
+            <li>
+              <Link to="work">Work</Link>
+            </li>
+            <li>
+              <a href="https://github.com/abouthiroppy/mattya">
+                <i className="fa fa-github icon"></i>
+                &nbsp; Repo
+              </a>
+            </li>
+          </ul>
+          <a href="#" className="button-collapse"
+            id="btn-hamburger"
+            data-activates="slide-out"
+            style={this._initCss().btnHamburger}>
+            <i className="mdi-navigation-menu"
+              style={this._initCss().hamburgerIcon}>
+            </i>
+          </a>
           <div className="container">
-            <ul>
-              <li>
-                <Link to="/" className="waves-effect">
-                  <i className="fa fa-home icon">&nbsp;Home</i>
-                </Link>
-              </li>
-              <li>
-                <Link to="profile" className="waves-effect">
-                  <i className="fa fa-male icon">&nbsp;Profile</i>
-                </Link>
-              </li>
-              <li>
-                <Link to="programming" className="waves-effect">
-                  <i className="fa fa-desktop icon"></i>
-                </Link>
-              </li>
-              <li>
-                <Link to="blog" className="waves-effect">
-                  <i className="fa fa-pencil icon"></i>
-                </Link>
-              </li>
-              <li>
-                <Link to="work" className="waves-effect">
-                  <i className="fa fa-briefcase icon">&nbsp;work</i>
-                </Link>
-              </li>
-              <li>
-                <a href="http://github.com/abouthiroppy">
-                  <i className="fa fa-github icon"></i>
-                </a>
-              </li>
-            </ul>
+            <span className="title">[WIP]</span>
           </div>
         </nav>
       </div>

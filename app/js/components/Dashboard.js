@@ -44,7 +44,6 @@ export default class extends Component {
     return (
       <div>
       <div className="card-panel teal lighten-1" style={this._initCss().lastCommitLabel}>
-        <p className="orange-text" style={{fontWeight: 500}}>[WIP] Unfinished!!</p>
         <span className="white-text text-darken-4">
           <i className="fa fa-github-alt"></i>
           &nbsp;Latest Commit on Github:&nbsp;

@@ -4,6 +4,12 @@ import React, {
 } from 'react';
 
 export default class extends Component {
+  constructor(props) {
+    super(props);
+
+    console.log(this.props.title)
+  }
+
   _initCss() {
     return {
       socialLink: {
