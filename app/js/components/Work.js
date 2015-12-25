@@ -36,22 +36,24 @@ export default class extends Component {
   }
 
   render() {
+    const prefix = 'http://metro.about-hiroppy.com/images/';
+
     return (
       <div className="row section">
         <h2 className="header page-section-title">Works</h2>
         {this.buildCard(
           'Flash',
-          'http://about-hiroppy.com/images/flash-bg1.jpg',
+          `${prefix}flash-bg1.jpg`,
           {
             btnColor : 'amber darken-2',
             cardColor: 'blue accent-1'
           },
           '2012-03-18',
-          'http://about-hiroppy.com/flash/'
+          'http://about-hiroppy.com/metro/flash/'
         )}
         {this.buildCard(
           '楽ラク顔文字(仮)',
-          'http://about-hiroppy.com/images/kaomozi.jpg',
+          `${prefix}kaomozi.jpg`,
           {
             btnColor : 'amber darken-2',
             cardColor: 'blue accent-1'
@@ -61,7 +63,7 @@ export default class extends Component {
         )}
         {this.buildCard(
           'Labelial',
-          'http://about-hiroppy.com/images/labelial.png',
+          `${prefix}labelial.png`,
           {
             btnColor : 'amber darken-2',
             cardColor: 'blue accent-1'
@@ -71,7 +73,7 @@ export default class extends Component {
         )}
         {this.buildCard(
           'AOJ_Compare',
-          'http://about-hiroppy.com/images/compare.png',
+          `${prefix}compare.png`,
           {
             btnColor : 'amber darken-2',
             cardColor: 'blue accent-1'
@@ -81,7 +83,7 @@ export default class extends Component {
         )}
         {this.buildCard(
           'AOJ_Compare_n',
-          'http://about-hiroppy.com/images/compare.png',
+          `${prefix}compare.png`,
           {
             btnColor : 'amber darken-2',
             cardColor: 'blue accent-1'
@@ -91,7 +93,7 @@ export default class extends Component {
         )}
         {this.buildCard(
           'あおいちゃん@AOJ',
-          'http://about-hiroppy.com/images/aoi.png',
+          `${prefix}aoi.png`,
           {
             btnColor : 'amber darken-2',
             cardColor: 'blue accent-1'

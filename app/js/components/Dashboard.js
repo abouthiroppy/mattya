@@ -55,8 +55,14 @@ export default class extends Component {
           src="https://travis-ci.org/abouthiroppy/mattya.svg?branch=master" />
       </div>
         <Menu />
-        <Blog />
-        <Travis />
+        <div className="row section">
+          <h2 className="header page-section-title">Blog</h2>
+          <Blog />
+        </div>
+        <div className="row section">
+          <h2 className="header page-section-title">Status</h2>
+          <Travis />
+        </div>
       </div>
     );
   }

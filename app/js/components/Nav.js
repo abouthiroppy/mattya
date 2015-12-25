@@ -44,19 +44,19 @@ export default class extends Component {
         <nav className="global-nav">
           <ul id="slide-out" className="side-nav">
             <img src="http://about-hiroppy.com/images/nav-choko.jpg" className="circle"/>
-            <li>
+            <li className={title === 'dashboard' ? 'active' : ''}>
               <Link to="/">Dashboard</Link>
             </li>
-            <li>
+            <li className={title === 'profile' ? 'active' : ''}>
               <Link to="profile">Profile</Link>
             </li>
-            <li>
+            <li className={title === 'programming' ? 'active' : ''}>
               <Link to="programming">Programming</Link>
             </li>
-            <li>
+            <li className={title === 'blog' ? 'active' : ''}>
               <Link to="blog">Blog</Link>
             </li>
-            <li>
+            <li className={title === 'work' ? 'active' : ''}>
               <Link to="work">Work</Link>
             </li>
             <li>

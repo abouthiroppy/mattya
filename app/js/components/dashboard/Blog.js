@@ -77,8 +77,7 @@ export default class extends Component {
   render() {
     if (this.state.ready) {
       return (
-        <div className="row section">
-          <h2 className="header page-section-title">Blog</h2>
+        <div>
           {this._buildBlogCard(
             this.state.data[0].title,
             this.state.data[0].img,
@@ -99,18 +98,15 @@ export default class extends Component {
     }
     else {
       return (
-        <div className="row section">
-          <h2 className="header page-section-title">Blog</h2>
-          <div className="col s12 m12 center">
-           <div className="preloader-wrapper big active">
-              <div className="spinner-layer spinner-blue-only">
-                <div className="circle-clipper left">
-                  <div className="circle"></div>
-                </div><div className="gap-patch">
-                  <div className="circle"></div>
-                </div><div className="circle-clipper right">
-                  <div className="circle"></div>
-                </div>
+        <div className="col s12 m12 center">
+         <div className="preloader-wrapper big active">
+            <div className="spinner-layer spinner-blue-only">
+              <div className="circle-clipper left">
+                <div className="circle"></div>
+              </div><div className="gap-patch">
+                <div className="circle"></div>
+              </div><div className="circle-clipper right">
+                <div className="circle"></div>
               </div>
             </div>
           </div>

@@ -90,23 +90,17 @@ export default class extends Component {
   render() {
     if (this.state.ready) {
       return (
-        <div className="row section">
-          <h2 className="header page-section-title">Status</h2>
-          <ul className="collection">
-            {this._buildTravisCollection(this.state.data[0])}
-            {this._buildTravisCollection(this.state.data[1])}
-            {this._buildTravisCollection(this.state.data[2])}
-          </ul>
-        </div>
+        <ul className="collection">
+          {this._buildTravisCollection(this.state.data[0])}
+          {this._buildTravisCollection(this.state.data[1])}
+          {this._buildTravisCollection(this.state.data[2])}
+        </ul>
       );
     }
     else {
       return (
-        <div className="row section">
-          <h2 className="header page-section-title">Status</h2>
-          <div className="progress">
-            <div className="indeterminate"></div>
-          </div>
+        <div className="progress">
+          <div className="indeterminate"></div>
         </div>
       );
     }

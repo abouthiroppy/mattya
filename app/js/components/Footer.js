@@ -68,7 +68,7 @@ export default class extends Component {
         </div>
         <div className="footer-copyright">
           <div className="container">
-            © 2015 Copyright about_hiroppy, All Rights Reserved.
+            © 2015 - 2016 Copyright about_hiroppy, All Rights Reserved.
           </div>
         </div>
       </footer>

@@ -2,7 +2,7 @@
 
 import React                from 'react';
 import ReactDOM             from 'react-dom';
-import createBrowserHistory from 'history/lib/createHasHHistory'; // debug
+import createBrowserHistory from 'history/lib/createHashHistory';
 import {
   Link,
   Route,

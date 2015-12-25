@@ -25,6 +25,18 @@
     background: rgba(0, 0, 0, .05)
   }
 
+  li.active {
+    background: $key-color;
+    
+    a {
+      color: #e5e5e5;
+    }
+
+    &:hover {
+      background: #26A69A;
+    }
+  }
+
   .title {
     font-size: 1.4rem;
     font-weight: 300;
