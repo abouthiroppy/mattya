@@ -11,6 +11,7 @@
   background: $key-color;
 
   a {
+    font-size: .9rem;
     height: 50px;
     line-height: 50px;
   }
@@ -26,6 +27,13 @@
 
   .title {
     font-size: 1.4rem;
+    font-weight: 300;
+  }
+
+  img.circle {
+    display: block;
+    margin: 40px auto;
+    width: 100px;
   }
 }
 

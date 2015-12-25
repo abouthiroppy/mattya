@@ -6,8 +6,6 @@ import React, {
 export default class extends Component {
   constructor(props) {
     super(props);
-
-    console.log(this.props.title)
   }
 
   _initCss() {

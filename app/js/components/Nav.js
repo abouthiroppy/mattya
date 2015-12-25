@@ -11,10 +11,6 @@ export default class extends Component {
     super(props);
   }
 
-  _setTitle() {
-    this.setState({title: location.hash.split('#/')[1].split('?')[0]});
-  }
-
   _initCss() {
     return {
       btnHamburger: {
@@ -22,7 +18,8 @@ export default class extends Component {
         display: 'block'
       },
       hamburgerIcon: {
-        fontSize: '1.9rem'
+        color   : '#333',
+        fontSize: '1.6rem'
       }
     };
   }
@@ -39,12 +36,16 @@ export default class extends Component {
   }
 
   render() {
+    let title = location.hash.split('#/')[1].split('?')[0];
+    if (title === '') title = 'dashboard';
+
     return (
       <div className="navbar-fixed">
         <nav className="global-nav">
           <ul id="slide-out" className="side-nav">
+            <img src="http://about-hiroppy.com/images/nav-choko.jpg" className="circle"/>
             <li>
-              <Link to="/">Root</Link>
+              <Link to="/">Dashboard</Link>
             </li>
             <li>
               <Link to="profile">Profile</Link>
@@ -74,7 +75,7 @@ export default class extends Component {
             </i>
           </a>
           <div className="container">
-            <span className="title">[WIP]</span>
+            <span className="title">{title}</span>
           </div>
         </nav>
       </div>

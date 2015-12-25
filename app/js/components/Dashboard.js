@@ -3,7 +3,7 @@ import React, {
   PropTypes
 } from 'react';
 
-import Menu   from './Dashboard/Menu';
+import Menu   from './dashboard/Menu';
 import Blog   from './dashboard/Blog';
 import Travis from './dashboard/Travis';
 
