@@ -40,10 +40,10 @@ export default class extends Component {
       <div className="row">
         <div className="col s12 m6 l6">
           <h2 className="header page-section-title">Menu</h2>
-          {this._build('/profile', 'Profile')}
+          {this._build('/profile', 'profile')}
           {this._build('/programming', 'lang')}
-          {this._build('/blog', 'Blog')}
-          {this._build('/work', 'work')}
+          {this._build('/blogs', 'blogs')}
+          {this._build('/works', 'works')}
         </div>
         <div className="col s12 m6 l6">
           <h2 className="header page-section-title">Social</h2>

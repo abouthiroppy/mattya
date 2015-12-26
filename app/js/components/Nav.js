@@ -50,14 +50,17 @@ export default class extends Component {
             <li className={title === 'profile' ? 'active' : ''}>
               <Link to="profile">Profile</Link>
             </li>
+            <li className={title === 'photos' ? 'active' : ''}>
+              <Link to="photos">Photos</Link>
+            </li>
             <li className={title === 'programming' ? 'active' : ''}>
               <Link to="programming">Programming</Link>
             </li>
-            <li className={title === 'blog' ? 'active' : ''}>
-              <Link to="blog">Blog</Link>
+            <li className={title === 'blogs' ? 'active' : ''}>
+              <Link to="blogs">Blogs</Link>
             </li>
-            <li className={title === 'work' ? 'active' : ''}>
-              <Link to="work">Work</Link>
+            <li className={title === 'works' ? 'active' : ''}>
+              <Link to="works">Works</Link>
             </li>
             <li>
               <a href="https://github.com/abouthiroppy/mattya">
