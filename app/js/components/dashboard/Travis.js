@@ -3,6 +3,8 @@ import React, {
   PropTypes
 } from 'react';
 
+import travis from '../../models/travis';
+
 export default class extends Component {
   constructor() {
     super();
@@ -32,10 +34,9 @@ export default class extends Component {
   }
 
   _fetchTravis() {
-    const uri = 'https://api.travis-ci.org/repos/abouthiroppy/mattya/builds';
     const res = [];
 
-    $.get(uri, (data) => {
+    travis().then((data) => {
       data.forEach((item) => {
         res.push({
           uri       : `https://travis-ci.org/abouthiroppy/mattya/builds/${item.id}`,

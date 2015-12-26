@@ -6,8 +6,8 @@ export default function() {
   return new Promise((resolve, reject) => {
     const userFeed = new Instafeed({
       get  : 'user',
-      error: (reject) => {
-        reject(res);
+      error: (err) => {
+        reject(err);
       },
       sortBy : 'most-recent',
       userId : '2358551403',

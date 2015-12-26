@@ -17,14 +17,14 @@ export default class extends Component {
     };
 
     instagram().then((res) => {
-      let arr = [];
+      const arr = [];
 
       for (const item of res.data) {
         arr.push({
-          description: item.caption.text,
-          link: item.link,
-          like: item.likes.count,
-          image: item.images.standard_resolution.url
+          link       : item.link,
+          like       : item.likes.count,
+          image      : item.images.standard_resolution.url,
+          description: item.caption.text
         });
       }
 

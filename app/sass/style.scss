@@ -7,6 +7,12 @@
   }
 }
 
+@media only screen and (max-width: 800px) {
+  .global-nav .container {
+    text-align: center;
+  }
+}
+
 .global-nav {
   background: $key-color;
 
