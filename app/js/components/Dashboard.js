@@ -3,9 +3,11 @@ import React, {
   PropTypes
 } from 'react';
 
-import Menu   from './dashboard/Menu';
-import Blog   from './dashboard/Blog';
-import Travis from './dashboard/Travis';
+import Menu    from './dashboard/Menu';
+import Blog    from './dashboard/Blog';
+import Photo   from './dashboard/Photo';
+import Travis  from './dashboard/Travis';
+import Twitter from './dashboard/Twitter';
 
 export default class extends Component {
   constructor(props) {
@@ -54,12 +56,16 @@ export default class extends Component {
         <img className="right" style={this._initCss().travisBadge}
           src="https://travis-ci.org/abouthiroppy/mattya.svg?branch=master" />
       </div>
-        <Menu />
-        <div className="row section">
+        <div className="row">
+          <h2 className="header page-section-title">Social</h2>
+          <Twitter />
+          <Photo />
+        </div>
+        <div className="row">
           <h2 className="header page-section-title">Blog</h2>
           <Blog />
         </div>
-        <div className="row section">
+        <div className="row">
           <h2 className="header page-section-title">Status</h2>
           <Travis />
         </div>

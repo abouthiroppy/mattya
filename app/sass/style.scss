@@ -55,6 +55,20 @@
   }
 }
 
+.tabs {
+  .tab a {
+    color: $key-color;
+
+    &:hover {
+      color: $key-sub-color;
+    }
+  }
+
+  .indicator {
+    background: $key-color;
+  }
+}
+
 .icon {
   vertical-align: middle;
 }

@@ -16,6 +16,63 @@ export default class extends Component {
       ready: false
     };
 
+    this._fetchInstagram();
+  }
+
+  _initCss() {
+    return {
+      row: {
+        minHeight: '500px'
+      },
+      progress: {
+        marginTop: '200px'
+      },
+      cardTitle: {
+        width     : '100%',
+        padding   : '10px',
+        fontSize  : '1.1rem',
+        background: 'rgba(0, 0, 0, .6)'
+      },
+      cardTitleSpan: {
+        display     : 'block',
+        overflow    : 'hidden',
+        whiteSpace  : 'nowrap',
+        textOverflow: 'ellipsis'
+      },
+      link: {
+        color: '#00e5ff'
+      },
+      likeCounter: {
+        color  : '#ff80ab',
+        float  : 'right',
+        display: 'block'
+      }
+    };
+  }
+
+  _buildCard(e) {
+    return (
+      <div className="col s6 m4 l2">
+        <div className="card">
+          <div className="card-image">
+            <img className="responsive-img materialboxed"src={e.image}/>
+            <div className="card-title" style={this._initCss().cardTitle}>
+              <span style={this._initCss().cardTitleSpan}>{e.description}</span>
+              <a href={e.link} target="_blank" style={this._initCss().link}>
+                <i className="fa fa-external-link"></i>
+              </a>
+              <div className="like-counter" style={this._initCss().likeCounter}>
+                <i className="fa fa-heart-o"></i>
+                <span>&nbsp;{e.like}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  _fetchInstagram() {
     instagram().then((res) => {
       const arr = [];
 
@@ -36,32 +93,6 @@ export default class extends Component {
     }).catch((err) => {
       console.error(err);
     });
-  }
-
-  _initCss() {
-    return {
-      row: {
-        minHeight: '500px'
-      },
-      progress: {
-        marginTop: '200px'
-      }
-    };
-  }
-
-  _buildCard(e) {
-    return (
-      <div className="col s12 m6 l4">
-        <div className="card">
-          <div className="card-image">
-            <img src={e.image} className="responsive-img materialboxed"/>
-            <span className="card-title">{e.description}
-            <a href={e.link} target="_blank">Link</a>
-            </span>
-          </div>
-        </div>
-      </div>
-    );
   }
 
   componentDidUpdate() {

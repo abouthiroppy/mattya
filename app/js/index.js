@@ -12,7 +12,9 @@ import {
 
 import routes from './routes';
 
-const history = createBrowserHistory();
+const history = createBrowserHistory({
+  queryKey: false
+});
 
 ReactDOM.render(
   <Router history={history}>
