@@ -64,7 +64,7 @@ export default class extends Component {
         });
       }
 
-      this.setState({data: arr});
+      this.setState({data: arr.splice(0, 8)});
 
       setTimeout(() => {
         this.setState({ready: true});

@@ -3,7 +3,8 @@ import React, {
   PropTypes
 } from 'react';
 
-import tweet from '../../models/tweet';
+import tweet             from '../../models/tweet';
+import CircleColorLoader from '../animation/CircleColorLoader';
 
 export default class extends Component {
   constructor() {
@@ -24,6 +25,10 @@ export default class extends Component {
 
   _initCss() {
     return {
+      loading: {
+        height   : '110px',
+        textAlign: 'center'
+      },
       container: {
         height: '480px'
       },
@@ -104,7 +109,8 @@ export default class extends Component {
     else {
       return (
         <div className="col s12 m6 l6">
-          <section className="card-panel" style={this._initCss().container}>
+          <section className="card-panel" style={this._initCss().loading}>
+            <CircleColorLoader />
           </section>
         </div>
       );

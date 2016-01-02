@@ -100,8 +100,10 @@ export default class extends Component {
     }
     else {
       return (
-        <div className="progress">
-          <div className="indeterminate"></div>
+        <div className="col s12 m12 center">
+          <div className="progress">
+            <div className="indeterminate"></div>
+          </div>
         </div>
       );
     }

@@ -54,13 +54,25 @@ export default class extends Component {
               <h5 className="white-text">License</h5>
               <ul>
                 <li>
-                  <a className="grey-text text-lighten-3">React</a>
+                  <a className="grey-text text-lighten-3"
+                    href="https://github.com/facebook/react"
+                    target="_blank">
+                    React
+                  </a>
                 </li>
                 <li>
-                  <a className="grey-text text-lighten-3">React-Router</a>
+                  <a className="grey-text text-lighten-3"
+                    href="https://github.com/rackt/react-router"
+                    target="_blank">
+                    React-Router
+                  </a>
                 </li>
                 <li>
-                  <a className="grey-text text-lighten-3">Materialize</a>
+                  <a className="grey-text text-lighten-3"
+                    href="https://github.com/Dogfalo/materialize"
+                    target="_blank">
+                    Materialize
+                  </a>
                 </li>
               </ul>
             </div>
