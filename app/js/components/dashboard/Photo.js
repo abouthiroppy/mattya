@@ -36,15 +36,22 @@ export default class extends Component {
               'left-align',
               'right-align'
             ];
-
             return (
               <li key={e.id}>
                 <img src={e.image}/>
                 <div className={`caption ${position[i % 3]}`}>
-                  <h4>{e.description}</h4>
                 </div>
               </li>
             );
+
+            // return (
+            //   <li key={e.id}>
+            //     <img src={e.image}/>
+            //     <div className={`caption ${position[i % 3]}`}>
+            //       <h4>{e.description}</h4>
+            //     </div>
+            //   </li>
+            // );
           })}
         </ul>
       </div>

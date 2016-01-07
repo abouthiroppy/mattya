@@ -40,7 +40,8 @@ export default class extends Component {
       const feeds = res.getElementsByTagName('item');
 
       [].forEach.call(feeds, (item) => {
-        const imgUrl = item.getElementsByTagName('encoded')[0].textContent.match(imgRe) === null ?
+        const imgUrl =
+          item.getElementsByTagName('encoded')[0].textContent.match(imgRe) === null ?
           'https://pbs.twimg.com/profile_images/459921170251264000/ax4FMwXA_400x400.jpeg' :
           item.getElementsByTagName('encoded')[0].textContent.match(imgRe)[0];
 
@@ -67,7 +68,7 @@ export default class extends Component {
             <span className="card-title" style={this._initCss().cardTitle}>{title}</span>
           </div>
           <div className="card-action">
-            <a href={link} target="_blank">This is a link</a>
+            <a href={link} target="_blank">Link</a>
           </div>
         </div>
       </div>

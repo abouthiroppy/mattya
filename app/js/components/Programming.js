@@ -64,8 +64,7 @@ export default class extends Component {
             <img src={icon} style={this.initCss().circleIcon} className="circle-icon" />
             <span style={this.initCss().cardTitle} classNamName="card-title">{lang}</span>
             </div>
-            <p>I am a very simple card. I am good at containing small bits of information.
-            I am convenient because I require little markup to use effectively.</p>
+            <p></p>
           </div>
         </div>
       </div>

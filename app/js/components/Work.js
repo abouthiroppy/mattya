@@ -6,6 +6,11 @@ import React, {
 export default class extends Component {
   initCss() {
     return {
+      title: {
+        width     : '100%',
+        padding   : '10px',
+        background: 'rgba(0, 0, 0, .5)'
+      },
       SocialLink: {
         fontSize: '1.5rem'
       },
@@ -22,7 +27,7 @@ export default class extends Component {
       <div className="card blue accent-1 small">
          <div className="card-image">
             <img src={img} />
-            <span className="card-title">{title}</span>
+            <span className="card-title" style={this.initCss().title}>{title}</span>
           </div>
           <div className="card-content white-text">
             <p>start on {period}</p>
@@ -49,7 +54,7 @@ export default class extends Component {
             cardColor: 'blue accent-1'
           },
           '2012-03-18',
-          'http://about-hiroppy.com/metro/flash/'
+          'http://flash.about-hiroppy.com'
         )}
         {this.buildCard(
           '楽ラク顔文字(仮)',
@@ -59,7 +64,7 @@ export default class extends Component {
             cardColor: 'blue accent-1'
           },
           '2011-06-17',
-          'http://blog.about-hiroppy.org/'
+          'http://about-hiroppy.com/exe/kaomozi.exe'
         )}
         {this.buildCard(
           'Labelial',
@@ -69,7 +74,7 @@ export default class extends Component {
             cardColor: 'blue accent-1'
           },
           '2013-10-07',
-          'http://about-hiroppy.com/Labelial/index.html'
+          'http://labelial.about-hiroppy.com'
         )}
         {this.buildCard(
           'AOJ_Compare',
@@ -79,7 +84,7 @@ export default class extends Component {
             cardColor: 'blue accent-1'
           },
           '2012-05-09',
-          'http://about-hiroppy.com/Labelial/index.html'
+          'http://about-hiroppy.com/AOJ_Compare/'
         )}
         {this.buildCard(
           'AOJ_Compare_n',
@@ -89,7 +94,7 @@ export default class extends Component {
             cardColor: 'blue accent-1'
           },
           '2012-06-21',
-          'http://about-hiroppy.com/Labelial/index.html'
+          'http://about-hiroppy.com/AOJ_Compare/'
         )}
         {this.buildCard(
           'あおいちゃん@AOJ',
@@ -99,7 +104,7 @@ export default class extends Component {
             cardColor: 'blue accent-1'
           },
           '2011-05-09',
-          'http://about-hiroppy.com/Labelial/index.html'
+          'https://twitter.com/aoj_bot'
         )}
 
       </div>
