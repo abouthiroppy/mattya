@@ -27,7 +27,11 @@ export default class extends Component {
             <p>start on {period}</p>
           </div>
           <div className="card-action">
-            <a className="waves-effect waves-light btn {color.btnColor}" href={uri}>Link</a>
+            <a className="waves-effect waves-light btn {color.btnColor}"
+              href={uri}
+              target="_blank">
+              Link
+            </a>
           </div>
         </div>
       </div>
