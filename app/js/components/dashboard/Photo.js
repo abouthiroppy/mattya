@@ -43,15 +43,6 @@ export default class extends Component {
                 </div>
               </li>
             );
-
-            // return (
-            //   <li key={e.id}>
-            //     <img src={e.image}/>
-            //     <div className={`caption ${position[i % 3]}`}>
-            //       <h4>{e.description}</h4>
-            //     </div>
-            //   </li>
-            // );
           })}
         </ul>
       </div>
@@ -67,7 +58,7 @@ export default class extends Component {
           link       : item.link,
           like       : item.likes.count,
           image      : item.images.standard_resolution.url,
-          description: item.caption.text
+          description: (item.caption === null ? '' : item.caption.text)
         });
       }
 
