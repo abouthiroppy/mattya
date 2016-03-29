@@ -78,10 +78,9 @@ export default class extends Component {
 
       for (const item of res.data) {
         arr.push({
-          link       : item.link,
-          like       : item.likes.count,
-          image      : item.images.standard_resolution.url,
-          description: item.caption.text
+          link : item.link,
+          like : item.likes.count,
+          image: item.images.standard_resolution.url
         });
       }
 

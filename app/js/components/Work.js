@@ -4,7 +4,7 @@ import React, {
 } from 'react';
 
 export default class extends Component {
-  initCss() {
+  _initCss() {
     return {
       title: {
         width     : '100%',
@@ -27,7 +27,7 @@ export default class extends Component {
       <div className="card blue accent-1 small">
          <div className="card-image">
             <img src={img} />
-            <span className="card-title" style={this.initCss().title}>{title}</span>
+            <span className="card-title" style={this._initCss().title}>{title}</span>
           </div>
           <div className="card-content white-text">
             <p>start on {period}</p>

@@ -53,6 +53,9 @@ export default class extends Component {
             <li className={title === 'photos' ? 'active' : ''}>
               <Link to="photos">Photos</Link>
             </li>
+            <li className={title === 'github' ? 'active' : ''}>
+              <Link to="github">Github</Link>
+            </li>
             <li className={title === 'programming' ? 'active' : ''}>
               <Link to="programming">Programming</Link>
             </li>
