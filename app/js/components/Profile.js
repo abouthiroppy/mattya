@@ -33,7 +33,7 @@ export default class extends Component {
               <p>I am a programmer.</p>
               <p>I love Dreams Come True and Acid Black Cherry.</p>
               <br />
-              <p>mail: contact[at]about-hiroppy.com</p>
+              <p>mail: hello[at]about-hiroppy.com</p>
             </div>
             <div className="card-action">
               <a href="https://twitter.com/about_hiroppy" target="_blank">
