@@ -7,7 +7,7 @@ export default function() {
     const uri = 'http://github.about-hiroppy.org';
 
     $.get(uri, (res) => {
-      resolve(res.pr);
+      resolve(res);
     });
   });
 }

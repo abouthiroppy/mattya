@@ -11,7 +11,8 @@ export default class extends Component {
 
     this.state = {
       pr   : [],
-      ready: false
+      org  : [],
+      ready: false,
     };
 
     this._fetchPR();
@@ -19,7 +20,10 @@ export default class extends Component {
 
   _fetchPR() {
     github().then((res) => {
-      this.setState({pr: res});
+      this.setState({
+        pr : res.pr,
+        org: res.org
+      });
       setTimeout(() => {
         this.setState({ready: true});
       }, 500);
@@ -43,10 +47,14 @@ export default class extends Component {
         fontSize: '0.9rem'
       },
       name: {
-        color: '#333'
+        color: '#f5f5f'
       },
       icon: {
+        color   : '#3498db',
         fontSize: '2rem'
+      },
+      orgImg: {
+        width: '50px'
       }
     };
   }
@@ -61,6 +69,18 @@ export default class extends Component {
               <span className="card-title" style={this._initCss().name}>abouthiroppy</span>
             </div>
             <div className="card-content">
+              <h6>organization</h6>
+              {
+                this.state.org.map((e) => {
+                  return (
+                    <a href={e.url} title={e.name} target="_blank">
+                      <img src={e.img} style={this._initCss().orgImg}/>
+                    </a>
+                  );
+                })
+              }
+            </div>
+            <div className="card-action">
               <a href="https://github.com/abouthiroppy" target="_blank">
                 <i className="fa fa-github" style={this._initCss().icon}></i>
               </a>
@@ -69,7 +89,7 @@ export default class extends Component {
         </div>
         <div className="col m7 s12">
           <section className="card-panel">
-            <h2 className="section-title">Pull Request</h2>
+            <h2 className="section-title">Pull Requests</h2>
             <ul className="collection with-header">
             {
               this.state.pr.map((e) => {

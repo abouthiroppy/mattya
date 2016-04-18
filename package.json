@@ -9,7 +9,7 @@
   "scripts": {
     "watchify": "gulp watchify",
     "build": "gulp build",
-    "test": "mocha --require js:babel-core/register",
+    "test": "mocha",
     "lint": "eslint app/js"
   },
   "author": "",
